@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { WalletProvider } from '@/contexts/wallet-context'
 import './globals.css'
 
 const inter = Inter({
@@ -50,7 +51,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
-        {children}
+        <WalletProvider>
+          {children}
+        </WalletProvider>
         <Analytics />
       </body>
     </html>

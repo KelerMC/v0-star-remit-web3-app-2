@@ -1,20 +1,11 @@
 "use client"
 
-import { Wallet, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { ConnectWalletButton } from "@/components/ui/connect-wallet-button"
 
-interface NavbarProps {
-  isConnected: boolean
-  onConnect: () => void
-  walletAddress: string
-}
-
-export function Navbar({ isConnected, onConnect, walletAddress }: NavbarProps) {
+export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-
-  const truncated = walletAddress
-    ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`
-    : ""
 
   return (
     <nav className="fixed top-0 right-0 left-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
@@ -63,22 +54,7 @@ export function Navbar({ isConnected, onConnect, walletAddress }: NavbarProps) {
         </div>
 
         <div className="hidden md:block">
-          {isConnected ? (
-            <div className="flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2">
-              <div className="h-2 w-2 rounded-full bg-emerald-400" />
-              <span className="font-mono text-sm text-foreground">
-                {truncated}
-              </span>
-            </div>
-          ) : (
-            <button
-              onClick={onConnect}
-              className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              <Wallet className="h-4 w-4" />
-              Connect Wallet
-            </button>
-          )}
+          <ConnectWalletButton />
         </div>
 
         <button
@@ -114,25 +90,9 @@ export function Navbar({ isConnected, onConnect, walletAddress }: NavbarProps) {
             >
               Send
             </a>
-            {isConnected ? (
-              <div className="flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 self-start">
-                <div className="h-2 w-2 rounded-full bg-emerald-400" />
-                <span className="font-mono text-sm text-foreground">
-                  {truncated}
-                </span>
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  onConnect()
-                  setMobileOpen(false)
-                }}
-                className="flex cursor-pointer items-center gap-2 self-start rounded-full bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                <Wallet className="h-4 w-4" />
-                Connect Wallet
-              </button>
-            )}
+            <div className="self-start">
+              <ConnectWalletButton />
+            </div>
           </div>
         </div>
       )}

@@ -1,13 +1,12 @@
 "use client"
 
-import { Wallet, ArrowRight, Zap, Shield, Globe } from "lucide-react"
+import { ArrowRight, Zap, Shield, Globe } from "lucide-react"
+import { useWallet } from "@/contexts/wallet-context"
+import { ConnectWalletButton } from "@/components/ui/connect-wallet-button"
 
-interface HeroSectionProps {
-  isConnected: boolean
-  onConnect: () => void
-}
+export function HeroSection() {
+  const { isConnected } = useWallet()
 
-export function HeroSection({ isConnected, onConnect }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
       {/* Background glow effects */}
@@ -44,13 +43,7 @@ export function HeroSection({ isConnected, onConnect }: HeroSectionProps) {
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           {!isConnected ? (
-            <button
-              onClick={onConnect}
-              className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:scale-[1.02] hover:opacity-90"
-            >
-              <Wallet className="h-5 w-5" />
-              Connect Wallet
-            </button>
+            <ConnectWalletButton />
           ) : (
             <a
               href="#dashboard"
