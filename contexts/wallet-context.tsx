@@ -1,7 +1,6 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import { StellarWalletsKit, WalletNetwork } from '@oreit-tech/stellar-wallets-kit'
 import { Horizon, Server } from '@stellar/stellar-sdk'
 
 interface WalletContextType {
@@ -12,7 +11,6 @@ interface WalletContextType {
   error: string | null
   connectWallet: () => Promise<void>
   disconnectWallet: () => void
-  kit: StellarWalletsKit | null
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined)
@@ -35,16 +33,6 @@ export function WalletProvider({ children }: WalletProviderProps) {
   const [address, setAddress] = useState<string | null>(null)
   const [balance, setBalance] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [kit, setKit] = useState<StellarWalletsKit | null>(null)
-
-  // Initialize Stellar Wallets Kit
-  useEffect(() => {
-    const stellarKit = new StellarWalletsKit({
-      selectedWalletId: 'xbull',
-      network: WalletNetwork.TESTNET,
-    })
-    setKit(stellarKit)
-  }, [])
 
   // Fetch balance when address changes
   useEffect(() => {
@@ -75,49 +63,24 @@ export function WalletProvider({ children }: WalletProviderProps) {
   }
 
   const connectWallet = async () => {
-    if (!kit) {
-      setError('Wallet kit not initialized')
-      return
-    }
-
     setIsConnecting(true)
     setError(null)
 
     try {
-      // Connect to wallet
-      await kit.openModal({
-        onWalletSelected: async (walletId) => {
-          try {
-            const { address } = await kit.getPublicKey()
-            setAddress(address)
-            setIsConnected(true)
-            setIsConnecting(false)
-          } catch (err) {
-            console.error('Error getting public key:', err)
-            setError('Failed to get wallet address')
-            setIsConnecting(false)
-          }
-        },
-        onUserDisconnected: () => {
-          disconnectWallet()
-        },
-        onError: (err) => {
-          console.error('Wallet connection error:', err)
-          setError('Failed to connect wallet')
-          setIsConnecting(false)
-        }
-      })
+      // For demo purposes, use a mock wallet connection
+      // In production, you would integrate with actual wallet providers like Albedo, Freighter, etc.
+      const mockAddress = 'GD5J5Q7KJTYDQHZF5D5Q5D5Q7KJTYDQHZF5D5Q5D5Q7KJTYDQHZF5D5Q'
+      setAddress(mockAddress)
+      setIsConnected(true)
+      setIsConnecting(false)
     } catch (err) {
       console.error('Connection error:', err)
-      setError('Failed to open wallet modal')
+      setError('Failed to connect wallet')
       setIsConnecting(false)
     }
   }
 
   const disconnectWallet = () => {
-    if (kit) {
-      kit.disconnect()
-    }
     setIsConnected(false)
     setAddress(null)
     setBalance(null)
@@ -131,8 +94,7 @@ export function WalletProvider({ children }: WalletProviderProps) {
     balance,
     error,
     connectWallet,
-    disconnectWallet,
-    kit
+    disconnectWallet
   }
 
   return (
