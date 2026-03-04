@@ -8,32 +8,41 @@ export function RoleSelector() {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      {/* Background effects */}
+      {/* Background effects - Andes Moderno theme */}
       <div
-        className="pointer-events-none absolute top-1/4 -left-32 h-96 w-96 rounded-full opacity-20 blur-[128px]"
-        style={{ background: "oklch(0.65 0.25 275)" }}
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[oklch(0.58_0.14_165)]/5 via-background to-[oklch(0.55_0.12_230)]/5"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-[oklch(0.58_0.14_165)] opacity-10 blur-[128px]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-[oklch(0.55_0.12_230)] opacity-10 blur-[128px]"
         aria-hidden="true"
       />
 
       <div className="relative z-10 mx-auto max-w-5xl text-center">
-        <h1 className="mb-6 text-5xl font-bold text-foreground md:text-6xl">
+        <h1 className="mb-8 mt-12 text-5xl font-bold text-foreground md:text-6xl">
           ¿Cómo quieres usar{" "}
-          <span className="bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] bg-clip-text text-transparent">
             EcoXport?
           </span>
         </h1>
 
-        <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
-          Conecta productores peruanos con compradores internacionales. Pagos instantáneos, contratos automáticos.
+        <p className="mx-auto mb-16 max-w-2xl text-xl font-medium text-foreground/90">
+          🌿 Conecta productores peruanos con compradores internacionales{" "}
+          <span className="text-[oklch(0.58_0.14_165)]">•</span> Pagos en segundos{" "}
+          <span className="text-[oklch(0.55_0.12_230)]">•</span> Smart contracts automáticos
         </p>
 
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
           {/* Producer Card */}
           <button
             onClick={() => setRole('producer')}
-            className="group cursor-pointer rounded-2xl border-2 border-border/60 bg-card/50 p-8 backdrop-blur-sm transition-all hover:border-[oklch(0.65_0.25_275)] hover:bg-card"
+            className="group cursor-pointer rounded-2xl border-2 border-border/60 bg-card/50 p-8 backdrop-blur-sm transition-all hover:border-[oklch(0.58_0.14_165)] hover:bg-card hover:shadow-2xl hover:shadow-[oklch(0.58_0.14_165)]/20 hover:scale-[1.02]"
           >
-            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] mx-auto">
+            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] mx-auto shadow-lg shadow-[oklch(0.58_0.14_165)]/30 group-hover:scale-110 transition-transform">
               <Sprout className="h-8 w-8 text-white" />
             </div>
             <h3 className="mb-3 text-2xl font-bold text-foreground">
@@ -44,16 +53,16 @@ export function RoleSelector() {
             </p>
             <ul className="mt-4 space-y-2 text-left text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Publica productos con certificados
+                <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Publica productos con certificados
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Recibe pagos en USDC/EUR
+                <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Recibe pagos en USDC/EUR
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Genera facturas SUNAT automáticas
+                <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Genera facturas SUNAT automáticas
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Analytics con IA
+                <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Analytics con IA
               </li>
             </ul>
           </button>
@@ -61,9 +70,9 @@ export function RoleSelector() {
           {/* Buyer Card */}
           <button
             onClick={() => setRole('buyer')}
-            className="group cursor-pointer rounded-2xl border-2 border-border/60 bg-card/50 p-8 backdrop-blur-sm transition-all hover:border-[oklch(0.55_0.2_250)] hover:bg-card"
+            className="group cursor-pointer rounded-2xl border-2 border-border/60 bg-card/50 p-8 backdrop-blur-sm transition-all hover:border-[oklch(0.55_0.12_230)] hover:bg-card hover:shadow-2xl hover:shadow-[oklch(0.55_0.12_230)]/20 hover:scale-[1.02]"
           >
-            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.55_0.2_250)] to-[oklch(0.7_0.15_200)] mx-auto">
+            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.55_0.12_230)] to-[oklch(0.7_0.15_200)] mx-auto shadow-lg shadow-[oklch(0.55_0.12_230)]/30 group-hover:scale-110 transition-transform">
               <Users className="h-8 w-8 text-white" />
             </div>
             <h3 className="mb-3 text-2xl font-bold text-foreground">
@@ -74,16 +83,16 @@ export function RoleSelector() {
             </p>
             <ul className="mt-4 space-y-2 text-left text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Productos verificados con certificados
+                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Productos verificados con certificados
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Paga en tu moneda (EUR/USD)
+                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Paga en tu moneda (EUR/USD)
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Escrow automático protege tu dinero
+                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Escrow automático protege tu dinero
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Tracking en tiempo real
+                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Tracking en tiempo real
               </li>
             </ul>
           </button>

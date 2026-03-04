@@ -49,7 +49,7 @@ export function ConnectWalletButton() {
       <Button
         onClick={connectWallet}
         disabled={isConnecting}
-        className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+        className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
       >
         {isConnecting ? (
           <>

@@ -126,7 +126,7 @@ export function Marketplace() {
         <div className="mb-12">
           <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
             Marketplace de{" "}
-            <span className="bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] bg-clip-text text-transparent">
               Exportación
             </span>
           </h1>
@@ -158,7 +158,7 @@ export function Marketplace() {
           {MOCK_PRODUCTS.map((product) => (
             <div
               key={product.id}
-              className="group cursor-pointer overflow-hidden rounded-2xl border border-border/60 bg-card/50 backdrop-blur-sm transition-all hover:border-[oklch(0.65_0.25_275)] hover:shadow-lg"
+              className="group cursor-pointer overflow-hidden rounded-2xl border border-border/60 bg-card/50 backdrop-blur-sm transition-all hover:border-[oklch(0.58_0.14_165)] hover:shadow-lg"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden bg-secondary">
@@ -173,7 +173,7 @@ export function Marketplace() {
               {/* Content */}
               <div className="p-6">
                 {/* Product Name */}
-                <h3 className="mb-2 text-xl font-bold text-foreground group-hover:text-[oklch(0.65_0.25_275)]">
+                <h3 className="mb-2 text-xl font-bold text-foreground group-hover:text-[oklch(0.58_0.14_165)]">
                   {product.name}
                 </h3>
 
@@ -219,7 +219,7 @@ export function Marketplace() {
                     <span className="text-3xl font-bold text-foreground">${product.price}</span>
                     <span className="text-muted-foreground">/{product.unit}</span>
                   </div>
-                  <button className="rounded-xl bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
+                  <button className="rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
                     Ver Detalle
                   </button>
                 </div>

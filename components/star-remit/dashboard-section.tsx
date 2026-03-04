@@ -125,7 +125,7 @@ export function DashboardSection({
                   href="#send"
                   className="flex items-center gap-3 rounded-xl border border-border/60 bg-secondary/50 px-4 py-3 transition-colors hover:bg-secondary"
                 >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)]">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)]">
                     <ArrowUpRight className="h-4 w-4 text-primary-foreground" />
                   </div>
                   <div>

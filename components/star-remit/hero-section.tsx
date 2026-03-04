@@ -31,7 +31,7 @@ export function HeroSection() {
 
         <h1 className="mb-6 text-balance text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl">
           Cross-border payments,{" "}
-          <span className="bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] bg-clip-text text-transparent">
             without borders.
           </span>
         </h1>
@@ -47,7 +47,7 @@ export function HeroSection() {
           ) : (
             <a
               href="#dashboard"
-              className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:scale-[1.02] hover:opacity-90"
+              className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:scale-[1.02] hover:opacity-90"
             >
               Go to Dashboard
               <ArrowRight className="h-5 w-5" />
@@ -68,14 +68,14 @@ export function HeroSection() {
           className="mx-auto mt-20 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3"
         >
           <div className="rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
-            <Zap className="mx-auto mb-3 h-8 w-8 text-[oklch(0.65_0.25_275)]" />
+            <Zap className="mx-auto mb-3 h-8 w-8 text-[oklch(0.58_0.14_165)]" />
             <p className="text-2xl font-bold text-foreground">{"< 5s"}</p>
             <p className="mt-1 text-sm text-muted-foreground">
               Transaction speed
             </p>
           </div>
           <div className="rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
-            <Shield className="mx-auto mb-3 h-8 w-8 text-[oklch(0.55_0.2_250)]" />
+            <Shield className="mx-auto mb-3 h-8 w-8 text-[oklch(0.55_0.12_230)]" />
             <p className="text-2xl font-bold text-foreground">$0.00001</p>
             <p className="mt-1 text-sm text-muted-foreground">
               Average fee

@@ -28,7 +28,7 @@ export function BuyerDashboard() {
           <div className="rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm text-muted-foreground">En escrow</span>
-              <Shield className="h-5 w-5 text-[oklch(0.65_0.25_275)]" />
+              <Shield className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
             </div>
             <p className="text-3xl font-bold text-foreground">$8,400</p>
           </div>
@@ -72,10 +72,10 @@ export function BuyerDashboard() {
               </div>
 
               {/* Escrow Progress */}
-              <div className="mb-4 rounded-lg border border-[oklch(0.65_0.25_275)]/30 bg-[oklch(0.65_0.25_275)]/10 p-4">
+              <div className="mb-4 rounded-lg border border-[oklch(0.58_0.14_165)]/30 bg-[oklch(0.58_0.14_165)]/10 p-4">
                 <div className="mb-2 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Shield className="h-5 w-5 text-[oklch(0.65_0.25_275)]" />
+                    <Shield className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
                     <span className="font-medium text-foreground">Smart Escrow Activo</span>
                   </div>
                   <span className="text-sm text-muted-foreground">Paso 3/4</span>
@@ -105,7 +105,7 @@ export function BuyerDashboard() {
                 <button className="flex-1 rounded-xl border border-border bg-secondary px-4 py-2 font-medium text-foreground transition-colors hover:bg-secondary/80">
                   Ver Tracking
                 </button>
-                <button className="flex-1 rounded-xl bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
+                <button className="flex-1 rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
                   <MessageSquare className="mr-2 inline h-4 w-4" />
                   Contactar Vendedor
                 </button>
@@ -129,9 +129,9 @@ export function BuyerDashboard() {
               </div>
 
               {/* Escrow Status */}
-              <div className="mb-4 rounded-lg border border-[oklch(0.65_0.25_275)]/30 bg-[oklch(0.65_0.25_275)]/10 p-4">
+              <div className="mb-4 rounded-lg border border-[oklch(0.58_0.14_165)]/30 bg-[oklch(0.58_0.14_165)]/10 p-4">
                 <div className="mb-2 flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-[oklch(0.65_0.25_275)]" />
+                  <Shield className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
                   <span className="font-medium text-foreground">Pago seguro en escrow</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
@@ -158,7 +158,7 @@ export function BuyerDashboard() {
             ].map((product, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-border/40 bg-card/30 p-4 transition-all hover:border-[oklch(0.65_0.25_275)] hover:bg-card/50"
+                className="rounded-xl border border-border/40 bg-card/30 p-4 transition-all hover:border-[oklch(0.58_0.14_165)] hover:bg-card/50"
               >
                 <h4 className="mb-1 font-bold text-foreground">{product.name}</h4>
                 <p className="mb-3 text-sm text-muted-foreground">{product.producer}</p>
@@ -168,7 +168,7 @@ export function BuyerDashboard() {
                     {product.badge}
                   </span>
                 </div>
-                <button className="w-full rounded-lg bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
+                <button className="w-full rounded-lg bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
                   Ver Producto
                 </button>
               </div>

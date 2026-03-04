@@ -4,74 +4,76 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.1 0.02 280);
-  --foreground: oklch(0.95 0.01 280);
-  --card: oklch(0.15 0.025 280);
-  --card-foreground: oklch(0.95 0.01 280);
-  --popover: oklch(0.15 0.025 280);
-  --popover-foreground: oklch(0.95 0.01 280);
-  --primary: oklch(0.65 0.25 275);
+  /* Paleta Andes Moderno - EcoXport */
+  --background: oklch(0.12 0.015 220);
+  --foreground: oklch(0.96 0.005 220);
+  --card: oklch(0.18 0.02 220);
+  --card-foreground: oklch(0.96 0.005 220);
+  --popover: oklch(0.18 0.02 220);
+  --popover-foreground: oklch(0.96 0.005 220);
+  --primary: oklch(0.58 0.14 165);  /* Verde Andino - Naturaleza */
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.2 0.03 280);
-  --secondary-foreground: oklch(0.9 0.01 280);
-  --muted: oklch(0.2 0.025 280);
-  --muted-foreground: oklch(0.6 0.02 280);
-  --accent: oklch(0.55 0.2 250);
+  --secondary: oklch(0.22 0.025 220);
+  --secondary-foreground: oklch(0.92 0.005 220);
+  --muted: oklch(0.22 0.02 220);
+  --muted-foreground: oklch(0.58 0.015 220);
+  --accent: oklch(0.55 0.12 230);  /* Azul Montaña - Andes */
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.04 275);
-  --input: oklch(0.18 0.03 280);
-  --ring: oklch(0.65 0.25 275);
-  --chart-1: oklch(0.65 0.25 275);
-  --chart-2: oklch(0.55 0.2 250);
-  --chart-3: oklch(0.7 0.15 200);
-  --chart-4: oklch(0.6 0.18 300);
-  --chart-5: oklch(0.75 0.1 220);
+  --border: oklch(0.28 0.03 220);
+  --input: oklch(0.2 0.025 220);
+  --ring: oklch(0.58 0.14 165);
+  --chart-1: oklch(0.58 0.14 165);  /* Verde */
+  --chart-2: oklch(0.55 0.12 230);  /* Azul */
+  --chart-3: oklch(0.5 0.08 200);   /* Gris-Azul Piedra */
+  --chart-4: oklch(0.65 0.18 150);  /* Verde Claro */
+  --chart-5: oklch(0.6 0.1 210);    /* Azul Grisáceo */
   --radius: 0.75rem;
-  --sidebar: oklch(0.12 0.025 280);
-  --sidebar-foreground: oklch(0.95 0.01 280);
-  --sidebar-primary: oklch(0.65 0.25 275);
+  --sidebar: oklch(0.15 0.02 220);
+  --sidebar-foreground: oglch(0.96 0.005 220);
+  --sidebar-primary: oklch(0.58 0.14 165);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.2 0.03 280);
-  --sidebar-accent-foreground: oklch(0.95 0.01 280);
-  --sidebar-border: oklch(0.25 0.04 275);
-  --sidebar-ring: oklch(0.65 0.25 275);
+  --sidebar-accent: oklch(0.22 0.025 220);
+  --sidebar-accent-foreground: oklch(0.92 0.005 220);
+  --sidebar-border: oklch(0.28 0.03 220);
+  --sidebar-ring: oklch(0.58 0.14 165);
 }
 
 .dark {
-  --background: oklch(0.1 0.02 280);
-  --foreground: oklch(0.95 0.01 280);
-  --card: oklch(0.15 0.025 280);
-  --card-foreground: oklch(0.95 0.01 280);
-  --popover: oklch(0.15 0.025 280);
-  --popover-foreground: oklch(0.95 0.01 280);
-  --primary: oklch(0.65 0.25 275);
+  /* Paleta Andes Moderno - EcoXport (Dark Mode) */
+  --background: oklch(0.12 0.015 220);
+  --foreground: oklch(0.96 0.005 220);
+  --card: oklch(0.18 0.02 220);
+  --card-foreground: oklch(0.96 0.005 220);
+  --popover: oklch(0.18 0.02 220);
+  --popover-foreground: oklch(0.96 0.005 220);
+  --primary: oklch(0.58 0.14 165);  /* Verde Andino */
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.2 0.03 280);
-  --secondary-foreground: oklch(0.9 0.01 280);
-  --muted: oklch(0.2 0.025 280);
-  --muted-foreground: oklch(0.6 0.02 280);
-  --accent: oklch(0.55 0.2 250);
+  --secondary: oklch(0.22 0.025 220);
+  --secondary-foreground: oklch(0.92 0.005 220);
+  --muted: oklch(0.22 0.02 220);
+  --muted-foreground: oklch(0.58 0.015 220);
+  --accent: oklch(0.55 0.12 230);  /* Azul Montaña */
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.04 275);
-  --input: oklch(0.18 0.03 280);
-  --ring: oklch(0.65 0.25 275);
-  --chart-1: oklch(0.65 0.25 275);
-  --chart-2: oklch(0.55 0.2 250);
-  --chart-3: oklch(0.7 0.15 200);
-  --chart-4: oklch(0.6 0.18 300);
-  --chart-5: oklch(0.75 0.1 220);
-  --sidebar: oklch(0.12 0.025 280);
-  --sidebar-foreground: oklch(0.95 0.01 280);
-  --sidebar-primary: oklch(0.65 0.25 275);
+  --border: oklch(0.28 0.03 220);
+  --input: oklch(0.2 0.025 220);
+  --ring: oklch(0.58 0.14 165);
+  --chart-1: oklch(0.58 0.14 165);
+  --chart-2: oklch(0.55 0.12 230);
+  --chart-3: oklch(0.5 0.08 200);
+  --chart-4: oklch(0.65 0.18 150);
+  --chart-5: oklch(0.6 0.1 210);
+  --sidebar: oklch(0.15 0.02 220);
+  --sidebar-foreground: oklch(0.96 0.005 220);
+  --sidebar-primary: oklch(0.58 0.14 165);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.2 0.03 280);
-  --sidebar-accent-foreground: oklch(0.95 0.01 280);
-  --sidebar-border: oklch(0.25 0.04 275);
-  --sidebar-ring: oklch(0.65 0.25 275);
+  --sidebar-accent: oklch(0.22 0.025 220);
+  --sidebar-accent-foreground: oklch(0.92 0.005 220);
+  --sidebar-border: oklch(0.28 0.03 220);
+  --sidebar-ring: oklch(0.58 0.14 165);
 }
 
 @theme inline {

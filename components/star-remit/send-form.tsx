@@ -137,7 +137,7 @@ export function SendForm() {
             <button
               type="submit"
               disabled={!isValid || status === "sending"}
-              className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-6 py-4 text-base font-semibold text-primary-foreground transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-6 py-4 text-base font-semibold text-primary-foreground transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {status === "sending" ? (
                 <>

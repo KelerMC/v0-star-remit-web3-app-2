@@ -18,27 +18,16 @@ export const metadata: Metadata = {
   title: 'EcoXport - Del Andes al Mundo, en segundos',
   description:
     'Marketplace blockchain que conecta productores peruanos con compradores internacionales. Pagos instantáneos con Stellar, certificados verificados, smart escrow.',
+  manifest: '/site.webmanifest',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a1030',
+  themeColor: '#10b981',
 }
 
 export default function RootLayout({

@@ -32,7 +32,7 @@ export function ProducerDashboard() {
           <div className="rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Pedidos activos</span>
-              <Package className="h-5 w-5 text-[oklch(0.65_0.25_275)]" />
+              <Package className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
             </div>
             <p className="text-3xl font-bold text-foreground">12</p>
             <p className="mt-2 text-sm text-muted-foreground">3 en preparación</p>
@@ -58,9 +58,9 @@ export function ProducerDashboard() {
         </div>
 
         {/* AI Predictions Section */}
-        <div className="mb-8 rounded-2xl border border-[oklch(0.65_0.25_275)]/30 bg-gradient-to-br from-[oklch(0.65_0.25_275)]/10 to-[oklch(0.55_0.2_250)]/5 p-8 backdrop-blur-sm">
+        <div className="mb-8 rounded-2xl border border-[oklch(0.58_0.14_165)]/30 bg-gradient-to-br from-[oklch(0.58_0.14_165)]/10 to-[oklch(0.55_0.12_230)]/5 p-8 backdrop-blur-sm">
           <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)]">
               <TrendingUp className="h-6 w-6 text-white" />
             </div>
             <div>
@@ -98,7 +98,7 @@ export function ProducerDashboard() {
               <p className="mb-2 text-sm text-muted-foreground">
                 Recomendación de inversión
               </p>
-              <p className="text-2xl font-bold text-[oklch(0.65_0.25_275)]">$8,500</p>
+              <p className="text-2xl font-bold text-[oklch(0.58_0.14_165)]">$8,500</p>
               <p className="mt-1 text-xs text-muted-foreground">
                 Para aumentar stock 35%
               </p>
@@ -110,7 +110,7 @@ export function ProducerDashboard() {
         <div className="mb-8 rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
           <div className="mb-6 flex items-center justify-between">
             <h3 className="text-xl font-bold text-foreground">Pedidos Recientes</h3>
-            <button className="text-sm text-[oklch(0.65_0.25_275)] hover:underline">
+            <button className="text-sm text-[oklch(0.58_0.14_165)] hover:underline">
               Ver todos
             </button>
           </div>
@@ -136,7 +136,7 @@ export function ProducerDashboard() {
                     {order.status}
                   </p>
                 </div>
-                <button className="ml-4 rounded-xl bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
+                <button className="ml-4 rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
                   <FileText className="h-4 w-4" />
                 </button>
               </div>
@@ -147,7 +147,7 @@ export function ProducerDashboard() {
         {/* Document Generation */}
         <div className="rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
           <div className="mb-6 flex items-center gap-3">
-            <FileText className="h-6 w-6 text-[oklch(0.65_0.25_275)]" />
+            <FileText className="h-6 w-6 text-[oklch(0.58_0.14_165)]" />
             <div>
               <h3 className="text-xl font-bold text-foreground">
                 Generación de Documentos
@@ -159,8 +159,8 @@ export function ProducerDashboard() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <button className="flex items-center gap-3 rounded-xl border border-border/60 bg-gradient-to-br from-[oklch(0.65_0.25_275)]/10 to-transparent p-4 text-left transition-colors hover:border-[oklch(0.65_0.25_275)]">
-              <FileText className="h-8 w-8 text-[oklch(0.65_0.25_275)]" />
+            <button className="flex items-center gap-3 rounded-xl border border-border/60 bg-gradient-to-br from-[oklch(0.58_0.14_165)]/10 to-transparent p-4 text-left transition-colors hover:border-[oklch(0.58_0.14_165)]">
+              <FileText className="h-8 w-8 text-[oklch(0.58_0.14_165)]" />
               <div>
                 <p className="font-medium text-foreground">Contrato Compraventa</p>
                 <p className="text-xs text-muted-foreground">Firmado digitalmente</p>

@@ -11,23 +11,12 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 right-0 left-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)]">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              className="h-5 w-5"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+        <div className="flex items-center gap-3">
+          <img 
+            src="/favicon-32x32.png" 
+            alt="EcoXport Logo" 
+            className="h-9 w-9 rounded-lg"
+          />
           <div>
             <span className="text-xl font-bold tracking-tight text-foreground">
               EcoXport
@@ -83,9 +72,9 @@ export function Navbar() {
           {role && (
             <div className="flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2">
               {role === 'producer' ? (
-                <Sprout className="h-4 w-4 text-[oklch(0.65_0.25_275)]" />
+                <Sprout className="h-4 w-4 text-[oklch(0.58_0.14_165)]" />
               ) : (
-                <Users className="h-4 w-4 text-[oklch(0.55_0.2_250)]" />
+                <Users className="h-4 w-4 text-[oklch(0.55_0.12_230)]" />
               )}
               <span className="text-sm font-medium text-foreground">
                 {role === 'producer' ? 'Productor' : 'Comprador'}
