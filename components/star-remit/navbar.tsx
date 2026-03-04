@@ -45,11 +45,20 @@ export function Navbar() {
                   <Link href="/dashboard" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Dashboard
                   </Link>
-                  <Link href="/dashboard#productos" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    Mis Productos
+                  <Link href="/dashboard/productos" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Productos
                   </Link>
-                  <Link href="/dashboard#analytics" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/dashboard/mensajes" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Mensajes
+                  </Link>
+                  <Link href="/dashboard/estadisticas" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Estadísticas
+                  </Link>
+                  <Link href="/dashboard/monedero" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Monedero
+                  </Link>
+                  <Link href="/dashboard/perfil" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Perfil
                   </Link>
                 </>
               )}
@@ -110,8 +119,20 @@ export function Navbar() {
                     <Link href="/dashboard" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
                       Dashboard
                     </Link>
-                    <Link href="/dashboard#productos" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
-                      Mis Productos
+                    <Link href="/dashboard/productos" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                      Productos
+                    </Link>
+                    <Link href="/dashboard/mensajes" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                      Mensajes
+                    </Link>
+                    <Link href="/dashboard/estadisticas" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                      Estadísticas
+                    </Link>
+                    <Link href="/dashboard/monedero" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                      Monedero
+                    </Link>
+                    <Link href="/dashboard/perfil" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                      Perfil
                     </Link>
                   </>
                 )}
