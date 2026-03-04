@@ -1,9 +1,13 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import { Horizon, Server } from '@stellar/stellar-sdk'
+import { Horizon } from '@stellar/stellar-sdk'
+
+type UserRole = 'producer' | 'buyer' | null
 
 interface WalletContextType {
+  role: UserRole
+  setRole: (role: UserRole) => void
   isConnected: boolean
   isConnecting: boolean
   address: string | null
@@ -28,6 +32,7 @@ interface WalletProviderProps {
 }
 
 export function WalletProvider({ children }: WalletProviderProps) {
+  const [role, setRole] = useState<UserRole>(null)
   const [isConnected, setIsConnected] = useState(false)
   const [isConnecting, setIsConnecting] = useState(false)
   const [address, setAddress] = useState<string | null>(null)
@@ -88,6 +93,8 @@ export function WalletProvider({ children }: WalletProviderProps) {
   }
 
   const value: WalletContextType = {
+    role,
+    setRole,
     isConnected,
     isConnecting,
     address,
