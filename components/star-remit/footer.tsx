@@ -20,7 +20,7 @@ export function Footer() {
             </svg>
           </div>
           <span className="text-sm font-semibold text-foreground">
-            StarRemit
+            EcoXport
           </span>
         </div>
         <div className="flex items-center gap-6">

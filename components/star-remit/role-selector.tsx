@@ -19,7 +19,7 @@ export function RoleSelector() {
         <h1 className="mb-6 text-5xl font-bold text-foreground md:text-6xl">
           ¿Cómo quieres usar{" "}
           <span className="bg-gradient-to-r from-[oklch(0.65_0.25_275)] to-[oklch(0.55_0.2_250)] bg-clip-text text-transparent">
-            StarRemit?
+            EcoXport?
           </span>
         </h1>
 

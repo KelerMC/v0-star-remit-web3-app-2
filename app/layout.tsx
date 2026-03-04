@@ -15,9 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'StarRemit - Stellar Payments Made Simple',
+  title: 'EcoXport - Del Andes al Mundo, en segundos',
   description:
-    'Send and receive XLM payments instantly on the Stellar network. Fast, secure, borderless remittance.',
+    'Marketplace blockchain que conecta productores peruanos con compradores internacionales. Pagos instantáneos con Stellar, certificados verificados, smart escrow.',
   icons: {
     icon: [
       {

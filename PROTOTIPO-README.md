@@ -1,8 +1,8 @@
-# 🚀 StarRemit - Prototipo para Ideathon
+# 🚀 EcoXport - Prototipo para Ideathon
 
 ## 🎯 Sobre el Proyecto
 
-**StarRemit** es un marketplace blockchain que conecta **productores peruanos** con **compradores internacionales**, eliminando intermediarios y usando la red Stellar para pagos instantáneos.
+**EcoXport** es un marketplace blockchain que conecta **productores peruanos** con **compradores internacionales**, eliminando intermediarios y usando la red Stellar para pagos instantáneos.
 
 ---
 
@@ -247,6 +247,15 @@ Branch: \`prototipo\`
 - [ ] Cronometrar a 3 minutos
 - [ ] Preparar respuestas a preguntas
 - [ ] Tener métricas memorizadas
+
+---
+
+## 🎨 Brand Identity
+
+**Nombre:** EcoXport  
+**Tagline:** "Del Andes al Mundo, en segundos"  
+**Colores:** Purple (#8B5CF6), Blue (#3B82F6), Green (#10B981)  
+**Valores:** Sostenibilidad, Innovación, Empoderamiento, Transparencia  
 
 ---
 

@@ -30,7 +30,7 @@ export function Navbar() {
           </div>
           <div>
             <span className="text-xl font-bold tracking-tight text-foreground">
-              StarRemit
+              EcoXport
             </span>
             {role && (
               <span className="ml-2 text-xs text-muted-foreground">
