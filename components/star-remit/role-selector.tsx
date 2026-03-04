@@ -23,14 +23,14 @@ export function RoleSelector() {
       />
 
       <div className="relative z-10 mx-auto max-w-5xl text-center">
-        <h1 className="mb-8 mt-12 text-5xl font-bold text-foreground md:text-6xl">
+        <h1 className="mb-4 mt-25 text-5xl font-bold text-foreground md:text-6xl">
           ¿Cómo quieres usar{" "}
           <span className="bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] bg-clip-text text-transparent">
             EcoXport?
           </span>
         </h1>
 
-        <p className="mx-auto mb-16 max-w-2xl text-xl font-medium text-foreground/90">
+        <p className="mx-auto mb-10 max-w-2xl text-xl font-medium text-foreground/90">
           🌿 Conecta productores peruanos con compradores internacionales{" "}
           <span className="text-[oklch(0.58_0.14_165)]">•</span> Pagos en segundos{" "}
           <span className="text-[oklch(0.55_0.12_230)]">•</span> Smart contracts automáticos
