@@ -33,7 +33,7 @@ export function RoleSelector() {
         <p className="mx-auto mb-10 max-w-2xl text-xl font-medium text-foreground/90">
           🌿 Conecta productores peruanos con compradores internacionales{" "}
           <span className="text-[oklch(0.58_0.14_165)]">•</span> Pagos en segundos{" "}
-          <span className="text-[oklch(0.55_0.12_230)]">•</span> Smart contracts automáticos
+          <span className="text-[oklch(0.55_0.12_230)]">•</span> Contratos automáticos
         </p>
 
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
@@ -49,7 +49,7 @@ export function RoleSelector() {
               Soy Productor
             </h3>
             <p className="text-muted-foreground">
-              Exporta directamente al mundo. Publica tus productos, recibe pagos instantáneos en crypto, genera documentos automáticamente.
+              Exporta directamente al mundo. Publica tus productos, recibe pagos instantáneos en dólares digitales, genera documentos automáticamente.
             </p>
             <ul className="mt-4 space-y-2 text-left text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
@@ -62,7 +62,7 @@ export function RoleSelector() {
                 <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Genera facturas SUNAT automáticas
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Analytics con IA
+                <span className="text-[oklch(0.58_0.14_165)] font-bold">✓</span> Estadísticas inteligentes de ventas
               </li>
             </ul>
           </button>
@@ -79,7 +79,7 @@ export function RoleSelector() {
               Soy Comprador
             </h3>
             <p className="text-muted-foreground">
-              Compra productos premium directo de Perú. Verifica calidad con certificados blockchain, pagos seguros con escrow.
+              Compra productos premium directo de Perú. Verifica calidad con certificados digitales, pagos 100% protegidos.
             </p>
             <ul className="mt-4 space-y-2 text-left text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
@@ -89,17 +89,17 @@ export function RoleSelector() {
                 <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Paga en tu moneda (EUR/USD)
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Escrow automático protege tu dinero
+                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Tu dinero protegido hasta recibir el producto
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Tracking en tiempo real
+                <span className="text-[oklch(0.55_0.12_230)] font-bold">✓</span> Seguimiento en tiempo real
               </li>
             </ul>
           </button>
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground">
-          Powered by Stellar • Pagos en 3-5 segundos • Fees de $0.00001
+          Tecnología Stellar • Pagos en 3-5 segundos • Comisión de $0.00001
         </p>
       </div>
     </section>

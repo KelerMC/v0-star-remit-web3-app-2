@@ -3,15 +3,23 @@
 import { Menu, X, Sprout, Users, LogOut } from "lucide-react"
 import { useState } from "react"
 import { useWallet } from "@/contexts/wallet-context"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const { role, setRole } = useWallet()
+  const router = useRouter()
+
+  const handleRoleChange = () => {
+    setRole(null)
+    router.push('/')
+  }
 
   return (
     <nav className="fixed top-0 right-0 left-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <img 
             src="/favicon-32x32.png" 
             alt="EcoXport Logo" 
@@ -27,38 +35,38 @@ export function Navbar() {
               </span>
             )}
           </div>
-        </div>
+        </Link>
 
         <div className="hidden items-center gap-6 md:flex">
           {role && (
             <>
               {role === 'producer' && (
                 <>
-                  <a href="#dashboard" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/dashboard" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Dashboard
-                  </a>
-                  <a href="#productos" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  </Link>
+                  <Link href="/dashboard#productos" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Mis Productos
-                  </a>
-                  <a href="#analytics" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    Analytics IA
-                  </a>
+                  </Link>
+                  <Link href="/dashboard#analytics" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    Estadísticas
+                  </Link>
                 </>
               )}
               
               {role === 'buyer' && (
                 <>
-                  <a href="#marketplace" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/marketplace" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Marketplace
-                  </a>
-                  <a href="#mis-ordenes" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  </Link>
+                  <Link href="/orders" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     Mis Órdenes
-                  </a>
+                  </Link>
                 </>
               )}
               
               <button
-                onClick={() => setRole(null)}
+                onClick={handleRoleChange}
                 className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <LogOut className="h-4 w-4" />
@@ -99,27 +107,27 @@ export function Navbar() {
               <>
                 {role === 'producer' && (
                   <>
-                    <a href="#dashboard" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    <Link href="/dashboard" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
                       Dashboard
-                    </a>
-                    <a href="#productos" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    </Link>
+                    <Link href="/dashboard#productos" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
                       Mis Productos
-                    </a>
+                    </Link>
                   </>
                 )}
                 {role === 'buyer' && (
                   <>
-                    <a href="#marketplace" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    <Link href="/marketplace" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
                       Marketplace
-                    </a>
-                    <a href="#mis-ordenes" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    </Link>
+                    <Link href="/orders" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>
                       Mis Órdenes
-                    </a>
+                    </Link>
                   </>
                 )}
                 <button
                   onClick={() => {
-                    setRole(null)
+                    handleRoleChange()
                     setMobileOpen(false)
                   }}
                   className="flex items-center gap-2 text-sm text-muted-foreground"

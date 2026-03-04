@@ -27,7 +27,7 @@ export function BuyerDashboard() {
 
           <div className="rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">En escrow</span>
+              <span className="text-sm text-muted-foreground">Protegido</span>
               <Shield className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
             </div>
             <p className="text-3xl font-bold text-foreground">$8,400</p>
@@ -50,7 +50,7 @@ export function BuyerDashboard() {
           </div>
         </div>
 
-        {/* Active Orders with Escrow Status */}
+        {/* Active Orders with Protection Status */}
         <div className="mb-8 rounded-2xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm">
           <h3 className="mb-6 text-xl font-bold text-foreground">Órdenes Activas</h3>
 
@@ -71,12 +71,12 @@ export function BuyerDashboard() {
                 </div>
               </div>
 
-              {/* Escrow Progress */}
+              {/* Payment Protection */}
               <div className="mb-4 rounded-lg border border-[oklch(0.58_0.14_165)]/30 bg-[oklch(0.58_0.14_165)]/10 p-4">
                 <div className="mb-2 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Shield className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
-                    <span className="font-medium text-foreground">Smart Escrow Activo</span>
+                    <span className="font-medium text-foreground">Protección de Pago Activa</span>
                   </div>
                   <span className="text-sm text-muted-foreground">Paso 3/4</span>
                 </div>
@@ -84,7 +84,7 @@ export function BuyerDashboard() {
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span className="text-sm text-muted-foreground">Pago depositado en escrow</span>
+                    <span className="text-sm text-muted-foreground">Pago en custodia segura</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400" />
@@ -92,7 +92,7 @@ export function BuyerDashboard() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="h-4 w-4 text-blue-400 animate-pulse" />
-                    <span className="text-sm text-foreground font-medium">En tránsito - Tracking: DHL-789456123</span>
+                    <span className="text-sm text-foreground font-medium">En tránsito - Seguimiento: DHL-789456123</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="h-4 w-4 text-muted-foreground" />
@@ -103,7 +103,7 @@ export function BuyerDashboard() {
 
               <div className="flex gap-3">
                 <button className="flex-1 rounded-xl border border-border bg-secondary px-4 py-2 font-medium text-foreground transition-colors hover:bg-secondary/80">
-                  Ver Tracking
+                  Ver Seguimiento
                 </button>
                 <button className="flex-1 rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
                   <MessageSquare className="mr-2 inline h-4 w-4" />
@@ -128,11 +128,11 @@ export function BuyerDashboard() {
                 </div>
               </div>
 
-              {/* Escrow Status */}
+              {/* Payment Protection Status */}
               <div className="mb-4 rounded-lg border border-[oklch(0.58_0.14_165)]/30 bg-[oklch(0.58_0.14_165)]/10 p-4">
                 <div className="mb-2 flex items-center gap-2">
                   <Shield className="h-5 w-5 text-[oklch(0.58_0.14_165)]" />
-                  <span className="font-medium text-foreground">Pago seguro en escrow</span>
+                  <span className="font-medium text-foreground">Pago 100% protegido</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Tu dinero está protegido hasta que confirmes la recepción del producto

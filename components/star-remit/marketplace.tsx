@@ -2,6 +2,7 @@
 
 import { Search, Filter, Star, MapPin, Award, Shield } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 interface Product {
   id: number
@@ -26,7 +27,7 @@ const MOCK_PRODUCTS: Product[] = [
     location: "La Libertad, Perú",
     price: 4.50,
     unit: "kg",
-    image: "/placeholder.jpg",
+    image: "/products/arandanos.jpg",
     rating: 4.9,
     reviews: 127,
     certificates: ["USDA Organic", "GlobalGAP", "Fair Trade"],
@@ -40,7 +41,7 @@ const MOCK_PRODUCTS: Product[] = [
     location: "Lima, Perú",
     price: 3.20,
     unit: "kg",
-    image: "/placeholder.jpg",
+    image: "/products/aguacate.jpg",
     rating: 4.8,
     reviews: 89,
     certificates: ["GlobalGAP", "SENASA"],
@@ -54,7 +55,7 @@ const MOCK_PRODUCTS: Product[] = [
     location: "Puno, Perú",
     price: 5.80,
     unit: "kg",
-    image: "/placeholder.jpg",
+    image: "/products/quinoa.jpg",
     rating: 5.0,
     reviews: 56,
     certificates: ["USDA Organic", "Fair Trade", "Kosher"],
@@ -68,7 +69,7 @@ const MOCK_PRODUCTS: Product[] = [
     location: "Junín, Perú",
     price: 12.50,
     unit: "kg",
-    image: "/placeholder.jpg",
+    image: "/products/cafe.jpg",
     rating: 4.9,
     reviews: 203,
     certificates: ["Rainforest Alliance", "USDA Organic"],
@@ -82,7 +83,7 @@ const MOCK_PRODUCTS: Product[] = [
     location: "Piura, Perú",
     price: 2.80,
     unit: "kg",
-    image: "/placeholder.jpg",
+    image: "/products/mango.jpg",
     rating: 4.7,
     reviews: 145,
     certificates: ["GlobalGAP", "SENASA"],
@@ -96,7 +97,7 @@ const MOCK_PRODUCTS: Product[] = [
     location: "Ica, Perú",
     price: 4.00,
     unit: "kg",
-    image: "/placeholder.jpg",
+    image: "/products/esparragos.jpg",
     rating: 4.8,
     reviews: 92,
     certificates: ["GlobalGAP", "BRC", "HACCP"],
@@ -131,7 +132,7 @@ export function Marketplace() {
             </span>
           </h1>
           <p className="text-lg text-muted-foreground">
-            Productos premium directamente de productores peruanos · Certificados verificados en blockchain
+            Productos premium directamente de productores peruanos · Certificados verificados digitalmente
           </p>
         </div>
 
@@ -156,15 +157,18 @@ export function Marketplace() {
         {/* Product Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {MOCK_PRODUCTS.map((product) => (
-            <div
+            <Link
               key={product.id}
+              href={`/product/${product.id}`}
               className="group cursor-pointer overflow-hidden rounded-2xl border border-border/60 bg-card/50 backdrop-blur-sm transition-all hover:border-[oklch(0.58_0.14_165)] hover:shadow-lg"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden bg-secondary">
-                <div className="flex h-full items-center justify-center text-muted-foreground">
-                  <Award className="h-16 w-16" />
-                </div>
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                />
                 <div className="absolute top-3 right-3 rounded-full bg-emerald-500/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
                   ✓ Verificado
                 </div>
@@ -219,12 +223,12 @@ export function Marketplace() {
                     <span className="text-3xl font-bold text-foreground">${product.price}</span>
                     <span className="text-muted-foreground">/{product.unit}</span>
                   </div>
-                  <button className="rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
+                  <span className="rounded-xl bg-gradient-to-r from-[oklch(0.58_0.14_165)] to-[oklch(0.55_0.12_230)] px-4 py-2 font-semibold text-white transition-opacity hover:opacity-90">
                     Ver Detalle
-                  </button>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
